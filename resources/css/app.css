@@ -1,0 +1,164 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: #2b2b2b;
+    padding: 25px 30px;
+    border-bottom: 2px solid #000;
+}
+
+header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-weight: bold;
+    font-style: 20px;
+    color: #FFFFFF;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a{
+color: #cccccc;
+text-decoration: none;
+font-size: 16px;
+transition: color 0.3s;
+}
+
+nav ul li a:hover {
+color: #FFFFFF;
+}
+
+.content {
+    flex: 1; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-block{
+    flex: 3;
+    background: #262626;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.aside-block {
+    flex: 1; 
+    background: #262626; 
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 250px; 
+}
+
+.aside-block h2{
+    font-size: 18px;
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.aside-block p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 20px; 
+}
+
+.main-block p{
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 20px;  
+}
+
+.hero{
+    position: relative;
+    height: 300px;
+    background: url(/storage/image/картинка.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-btn{
+    color: #ffffff;
+    background-color: #FF4F00;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;   
+    padding: 15px 30px;       
+    font-size: 16px;        
+    font-weight: bold;    
+}
+
+.hero-overlay {
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1000px;       
+    margin: 40px auto;     
+    background: #262626;    
+    padding: 40px;           
+    border-radius: 8px;    
+}
+
+.about-container h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444; 
+    padding-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 16px;
+    line-height: 1.6;        
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
