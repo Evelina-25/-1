@@ -8,7 +8,22 @@
 <div class="main-container">
     <div class="main-block">
         <h1>Contact Page</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor delectus quaerat inventore qui, hic harum nihil nisi dolorum amet? Similique sint eligendi doloremque iure libero debitis laudantium, natus deserunt harum?</p>
+       <form action="{{ route('contact.post') }}" method="POST">
+        @csrf
+        <label for="name">Имя</label>
+        <input type="text" placeholder="Введите имя" name="name" id="name">
+
+        <label for="name">Email</label>
+        <input type="email" placeholder="Введите email" name="email" id="email">
+
+         <label for="subject">Тема сообщения</label>
+        <input type="text" placeholder="Введите тему" name="subject" id="subject">
+
+        <label for="message">Сообщение</label>
+        <textarea name="message" id="message" placeholder="Введите сообщение"></textarea>
+
+        <button type="submit">Отправить</button>
+       </form>
     </div>
 
     @include('includes.aside')
