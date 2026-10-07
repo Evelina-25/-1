@@ -12,8 +12,9 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('static.contact');
-})->name('contact');;
+})->name('contact');
 
 Route::post('/contact', function () {
-    dd(Request::all());
+    //dd(Request::all());
+    return redirect('/contact')->withInput();
 })->name('contact.post');
