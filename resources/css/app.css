@@ -177,6 +177,7 @@ form label{
     font-weight: 600;
     letter-spacing: .2px;
     margin-top: 6px;
+    padding: 8px;
 }
 
 form input, 
@@ -216,6 +217,7 @@ form button {
     color: #ffffff;
     border: 0;
     padding: 12px 18px;
+    margin-top: 10px;
     font-size: 15px;
     font-weight: 700;
     border-radius: 10px;
@@ -230,3 +232,21 @@ form button:hover{
 form button:active {
 transform: translateY(1px) scale(.99);
 }
+
+form input:invalid,
+form textarea:invalid{
+border-color: #ef4444;
+}
+
+.block-error{
+    background: #c23939;
+    width: 96%;
+    padding: 10px 2%;
+}
+
+.block-error li{
+   line-height: 170%;
+   color: #e8e8e8;
+   font-size: 17px;
+}
+
