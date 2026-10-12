@@ -19,6 +19,7 @@
         <div class="post">
             <h2>{{$el->title}}</h2>
              <p>{{$el->anons}}</p>
+             <p><a href="{{ route('posts.one', $el->id) }}">Детальнее</a></p>
         </div>
     @endforeach
 </div>

@@ -276,3 +276,17 @@ border-color: #ef4444;
     line-height: 1.6;
 }
 
+.post a{
+    background: #dcb516;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.post a:hover{
+    background-color: #8b710b;
+}
+
+

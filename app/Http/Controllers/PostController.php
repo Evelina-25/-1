@@ -21,4 +21,30 @@ class PostController extends Controller
         $posts = Post::orderBy('id', 'desc')->get();
         return view ('posts.index')->with('posts', $posts);
     }
+
+     public function show($id){
+        $post = Post::findOrFail($id);
+        return view ('posts.show')->with('post', $post);
+    }
+
+    public function edit($id){
+        $post = Post::findOrFail($id);
+        return view ('posts.edit')->with('post', $post);
+    }
+
+    public function update($id, Request $request){
+       $data = $request->validate([
+            'title'=>'reguired|min:5',
+            'anons'=>'reguired|min:7',
+            'text'=>'reguired|min:10',
+        ]);
+
+        $post = Post::findOrFail($id);
+        $post->tile = $data['title'];
+        $post->anons = $data['anons'];
+        $post->text = $data['text'];
+        $post->save();
+
+        return redirect()->route('posts.one', $id);
+    }
 }
