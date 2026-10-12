@@ -17,7 +17,7 @@
 <div class="posts">
     @foreach($posts as $el)
         <div class="post">
-            <h2>{{title}}</h2>
+            <h2>{{$el->title}}</h2>
              <p>{{$el->anons}}</p>
         </div>
     @endforeach
