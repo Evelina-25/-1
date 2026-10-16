@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactRequest;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class BasicController extends Controller
 {
@@ -24,12 +26,14 @@ class BasicController extends Controller
 
      public function submit(ContactRequest $request)
     {
-        $message = New Message();
+        $message = new Message();
         $message->name = $request->input('name');
         $message->email = $request->input('email');
         $message->subject = $request->input('subject');
         $message->text = $request->input('message');
         $message->save();
+
+        Mail::to('evanyarkhina@inbox.ru')->send(new ContactMail($message));
 
         return redirect()->route('home');
     }

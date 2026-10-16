@@ -34,17 +34,24 @@ class PostController extends Controller
 
     public function update($id, Request $request){
        $data = $request->validate([
-            'title'=>'reguired|min:5',
-            'anons'=>'reguired|min:7',
-            'text'=>'reguired|min:10',
+            'title'=>'required|min:5',
+            'anons'=>'required|min:7',
+            'text'=>'required|min:10',
         ]);
 
         $post = Post::findOrFail($id);
-        $post->tile = $data['title'];
+        $post->title = $data['title'];
         $post->anons = $data['anons'];
         $post->text = $data['text'];
         $post->save();
 
         return redirect()->route('posts.one', $id);
+    }
+
+        public function delete($id){
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return redirect()->route('posts');
     }
 }
